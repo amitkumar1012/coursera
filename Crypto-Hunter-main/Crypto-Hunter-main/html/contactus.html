@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptoza - Trusted & Secure Trading Crypto Wallet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/contactus.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- heade -->
+    <header class="cont">
+      <nav >
+          <a class="logo" href="index.html">CryptoHunter</a>
+          <div class="middle">
+
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="contactus.html">Contact Us</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+
+          </ul>
+        </div>
+        
+        <div class="d-grid gap-2 d-md-block">
+          <button type="button" class="bibhu" onclick="myfunction()">Sign In</button>
+          
+          <button type="button" class="btn btn-primary btn-lg" onclick="myfunction()">Get Started</button>
+        </div>   
+      </nav>
+  </header>
+
+  <div class="container">
+    <form action="action_page.php">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">India</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>
+  <script>
+    function myfunction(){ 
+      window.location.href='signup.html';
+    }
+  </script>
+  

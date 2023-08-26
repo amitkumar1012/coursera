@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup Form</title>
+    <style>
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .container .box {
+            position: absolute;
+            width: 350px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 25px 25px 45px 25px;
+            border-radius: 20px;
+        }
+        
+
+        button[type=submit] {
+            background: linear-gradient(45deg , #0d6efd , #261f24);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type=submit]:hover {
+            background-color: #45a049;
+        }
+        .box .login_button{
+  width: 100%;
+  background: linear-gradient(45deg , #0d6efd , #261f24);
+  border: none;
+  padding: 10px 16px;
+  margin-top: 30px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(45deg, rgb(47, 46, 66), rgb(13, 11, 11));
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 44px;
+            margin-bottom: 30px;
+            position: relative;
+            color: #f2f2f2;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <h2>Signup Form</h2>
+        <div class="box">
+            <form>
+                <div class="input_box">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input_box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input_box">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+               </div>
+        <div class="input_box">
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+    </div>
+
+    </form>
+    <button class="login_button" type="submit" onclick="signup()">Signup</button>
+    <div id="error-message"></div>
+    </div>
+    </div>
+    <script>
+        function signup() {
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var password = document.getElementById("password").value.trim();
+            var confirm_password = document.getElementById("confirm-password").value.trim();
+
+            // Add your signup validation logic here
+            if (name.length < 3) {
+                document.getElementById("error-message").innerHTML = "Name must be at least 3 characters long.";
+                return false;
+            }
+            if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                document.getElementById("error-message").innerHTML = "Invalid email address.";
+                return false;
+            }
+            if (password.length < 8) {
+                document.getElementById("error-message").innerHTML = "Password must be at least 8 characters long.";
+                return false;
+            }
+            if (password != confirm_password) {
+                document.getElementById("error-message").innerHTML = "Passwords do not match.";
+                return false;
+            }
+
+            window.alert("Successfully");
+            window.location.href = "login.html";
+
+            // Redirect to home page after successful signup
+
+            // Make sure that the page is actually redirecting
+            console.log("Redirecting to home page...");
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
